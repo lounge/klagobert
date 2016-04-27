@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "A slack bot that collects statistics on whining",
   "main": "lib/klagobert.js",
+  "repository": "https://github.com/lounge/klagobert",
   "scripts": {
     "start": "node index.js"
   },
@@ -13,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "mongodb": "^2.1.18",
+    "sentiment-swedish": "^1.0.6",
     "slackbots": "^0.5.1"
   }
 }
