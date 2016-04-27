@@ -1,1 +1,1 @@
-slack API key: xoxb-38119694835-CPLzUltyr1mvPNmRAOdDHBbF
+* Addon list of words to sentiment (json).
