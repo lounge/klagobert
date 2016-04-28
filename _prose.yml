@@ -1,0 +1,5 @@
+prose:
+  ignore:
+    - /lib
+    - .gitignore
+    - package.json
