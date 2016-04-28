@@ -1,5 +1,9 @@
 prose:
   ignore:
     - /lib
+    - /node_modules
     - .gitignore
     - package.json
+    - Procfile
+    - _prose.yml
+    - index.js
