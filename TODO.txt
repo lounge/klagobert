@@ -1,4 +1,10 @@
-* Addon list of words to sentiment (json). - DONE
+* Addon list of words to sentiment (json) - DONE
+
+* Split command logic to Commands.js / Messages.js - SEMI DONE
+
+* Add express server to map slash commands to routes
+
+* Websockets to communicate from server to klagobert
 
 * Commands:
   - /reset-bp
@@ -10,6 +16,5 @@
   - Combo (Multiple whines in a row)
   - Achivements (BP per minute (BPM))
 
-* Split command logic to Commands.js
 
 * Util.js
