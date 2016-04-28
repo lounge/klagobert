@@ -1,1 +1,15 @@
-* Addon list of words to sentiment (json).
+* Addon list of words to sentiment (json). - DONE
+
+* Commands:
+  - /reset-bp
+  - /top-whine
+  - /last-whine
+  - /me
+
+* Features
+  - Combo (Multiple whines in a row)
+  - Achivements (BP per minute (BPM))
+
+* Split command logic to Commands.js
+
+* Util.js
