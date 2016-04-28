@@ -5,10 +5,10 @@
   "main": "lib/klagobert.js",
   "repository": "https://github.com/lounge/klagobert",
   "scripts": {
-    "start": "node index.js"
+    "start": "BOT_API_KEY=xoxb-38119694835-DTFUJZ96nKuxWUecIHD5XzVO MONGODB_URI=mongodb://heroku_rvtr5cfc:78vkrrodpp393878pgifelsbdg@ds055862.mlab.com:55862/heroku_rvtr5cfc CHANNEL_ID=0 node index.js"
   },
   "bin": {
-    "klagobert": "index.js"
+    "klagobert": "BOT_API_KEY=xoxb-38119694835-DTFUJZ96nKuxWUecIHD5XzVO MONGODB_URI=mongodb://heroku_rvtr5cfc:78vkrrodpp393878pgifelsbdg@ds055862.mlab.com:55862/heroku_rvtr5cfc CHANNEL_ID=0 node index.js"
   },
   "author": "Fred Lundén",
   "license": "ISC",
