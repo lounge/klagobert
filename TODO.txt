@@ -7,6 +7,7 @@
 * Websockets to communicate from server to klagobert
 
 * Commands:
+  - /scoreboard
   - /reset-bp
   - /top-whine
   - /last-whine
