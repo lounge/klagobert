@@ -8,8 +8,12 @@
   "kolares": 3,
   "fan": -1,
   "satan": -1,
-  "helvete va bra": 4,
-  "helvete va dåligt": -4,
-  "mycket bra": 4,
-  "mycket dåligt": -4
+  "nice": 2,
+  "najs": 2,
+  "fuck": -3,
+  "fucking": -3,
+  "shit": -3,
+  "malaka": -4,
+  "lack": -3,
+  "lackar": -3,
 }
