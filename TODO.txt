@@ -1,4 +1,4 @@
-* Use comparative instead of score
+* Use comparative instead of score - TESTING
 
 * Addon list of words to sentiment (json) - DONE
 
@@ -9,11 +9,12 @@
 * Websockets to communicate from server to klagobert
 
 * Commands:
-  - /scoreboard
-  - /reset-bp
-  - /top-whine
-  - /last-whine
+  - /scoreboard - DONE
+  - /reset-bp - DONE
+  - /top-whines - DONE
+  - /last-whine - DONE
   - /me
+  - /help - DONE
 
 * Features
   - Combo (Multiple whines in a row)
