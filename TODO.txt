@@ -1,3 +1,5 @@
+* Use comparative instead of score
+
 * Addon list of words to sentiment (json) - DONE
 
 * Split command logic to Commands.js / Messages.js - SEMI DONE
