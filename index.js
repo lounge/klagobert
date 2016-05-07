@@ -37,6 +37,6 @@ var routes = require('./lib/routes')(klagobert);
 // routes.bindKlagobert(klagobert);
 
 server.use('/', routes);
-server.listen(3000);
+server.listen(80);
 
 klagobert.run();
