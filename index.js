@@ -14,6 +14,7 @@ var token = process.env.BOT_API_KEY;
 var name = process.env.BOT_NAME;
 var dbPath = process.env.MONGODB_URI;
 var channelId = process.env.CHANNEL_ID;
+var port =  process.env.PORT || 3000;
 
 var db = new Db(dbPath);
 var messages = new Messages(db);
@@ -37,6 +38,6 @@ var routes = require('./lib/routes')(klagobert);
 // routes.bindKlagobert(klagobert);
 
 server.use('/', routes);
-server.listen(80);
+server.listen(port);
 
 klagobert.run();
