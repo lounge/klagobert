@@ -1,7 +1,7 @@
 'use strict'
 
 var Klagobert = require('./lib/klagobert');
-var Db = require('./lib/db');
+var Db = require('./data/db');
 var Commands = require('./lib/commands');
 var Messages = require('./lib/messages');
 var Sentiment = require('./lib/sentiment');
@@ -31,11 +31,8 @@ var klagobert = new Klagobert({
   sentiment: sentiment
 });
 
-var routes = require('./lib/routes')(klagobert);
+var routes = require('./api/routes')(klagobert);
 
-
-
-// routes.bindKlagobert(klagobert);
 server.use(bodyParser.urlencoded({ extended: false }));
 server.use(bodyParser.json());
 server.use('/', routes);

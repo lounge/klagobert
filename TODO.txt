@@ -2,11 +2,9 @@
 
 * Addon list of words to sentiment (json) - DONE
 
-* Split command logic to Commands.js / Messages.js - SEMI DONE
+* Split command logic to Commands.js / Messages.js - DONE
 
-* Add express server to map slash commands to routes
-
-* Websockets to communicate from server to klagobert
+* Add express server to map slash commands to routes - DONE
 
 * Commands:
   - /scoreboard - DONE
@@ -21,4 +19,4 @@
   - Achivements (BP per minute (BPM))
 
 
-* Util.js
+* Util.js - MAYBE, MAYBE NOT, MAYBE GO FUCK YOURSELF...
