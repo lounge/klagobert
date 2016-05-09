@@ -6,7 +6,7 @@ var Commands = require('./lib/commands');
 var Messages = require('./lib/messages');
 var Sentiment = require('./lib/sentiment');
 
-
+var bodyParser = require('body-parser');
 var express = require('express');
 var server = express();
 
@@ -36,7 +36,8 @@ var routes = require('./lib/routes')(klagobert);
 
 
 // routes.bindKlagobert(klagobert);
-
+server.use(bodyParser.urlencoded({ extended: false }));
+server.use(bodyParser.json());
 server.use('/', routes);
 server.listen(port);
 
