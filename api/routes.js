@@ -26,7 +26,7 @@ module.exports = function(klagobert) {
   router.post('/reset-bp', function(req, res) {
     var self = this;
     var username = req.body.user_name;
-    klagobert.commands.clearScoreboard(function(username, reply) {
+    klagobert.commands.clearScoreboard(username, function(reply) {
       klagobert.sendMessage(reply);
     });
     res.send('reset-bp');
