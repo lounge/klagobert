@@ -15,7 +15,7 @@
   - /help - DONE
 
 * Features
-  - Combo (Multiple whines in a row)
+  - Combo (Multiple whines in a row) - SEMI DONE
   - Achivements (BP per minute (BPM))
 
 

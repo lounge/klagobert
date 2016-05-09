@@ -102,7 +102,6 @@ Db.prototype.saveWhineScore = function(whine, score) {
     { upsert: true },
     function(err, results) {
       if (err) {
-        console.log(err);
         throw err;
       }
     });
@@ -127,6 +126,44 @@ Db.prototype.getTopWhines = function(callback) {
     .limit(10)
     .toArray(function(err, topWhines) {
       callback(topWhines);
+    });
+}
+
+Db.prototype.saveWhineStreak = function(user, streak, score) {
+  var self = this;
+  this.db.collection('whine_streak').updateOne(
+    { 'user': user },
+    { $set: { 'streak': streak } },
+    { upsert: true },
+    function(err, results) {
+      if (err) {
+        throw err;
+      }
+    });
+}
+
+Db.prototype.getWhineStreak = function(user, callback) {
+  this.db.collection('whine_streak')
+    .findOne({ 'user': user })
+    .then(function(user) {
+      if (user !== null) {
+        callback(user.streak);
+      } else {
+        callback(0);
+      }
+  });
+}
+
+Db.prototype.clearWhineStreak = function(user, callback) {
+  var self = this;
+  this.db.collection('whine_streak').updateOne(
+    { 'user': user },
+    { $set: { 'streak': 0 } },
+    { upsert: true },
+    function(err, results) {
+      if (err) {
+        throw err;
+      }
     });
 }
 
