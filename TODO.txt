@@ -13,6 +13,7 @@
   - /last-whine - DONE
   - /me
   - /help - DONE
+  - /ifb - I'm feeling bitter
 
 * Features
   - Combo (Multiple whines in a row) - SEMI DONE
