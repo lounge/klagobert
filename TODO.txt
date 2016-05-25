@@ -6,6 +6,8 @@
 
 * Add express server to map slash commands to routes - DONE
 
+* Disconnect msg
+
 * Commands:
   - /scoreboard - DONE
   - /reset-bp - DONE
@@ -13,7 +15,7 @@
   - /last-whine - DONE
   - /me
   - /help - DONE
-  - /ifb - I'm feeling bitter
+  - /im-feeling-bitter - DONW
 
 * Features
   - Combo (Multiple whines in a row) - SEMI DONE

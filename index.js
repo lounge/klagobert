@@ -17,9 +17,10 @@ var channelId = process.env.CHANNEL_ID;
 var port =  process.env.PORT || 3000;
 
 var db = new Db(dbPath);
-var messages = new Messages(db);
-var commands = new Commands(db, messages);
 var sentiment = new Sentiment();
+var messages = new Messages(db, sentiment);
+var commands = new Commands(db, messages);
+
 
 var klagobert = new Klagobert({
   channelId: channelId,
