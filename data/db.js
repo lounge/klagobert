@@ -13,8 +13,8 @@ Db.prototype._connect = function() {
   var self = this;
   mongo.MongoClient.connect(this.dbPath, function(err, db) {
     self.db = db;
-    self.db.collection('scoreboard').drop();
-    self.db.collection('top_whines').drop();
+    // self.db.collection('scoreboard').drop();
+    // self.db.collection('top_whines').drop();
     self.getScoreboard(function(scoreboard) {
       for (var i = 0; i < scoreboard.length; i++) {
         var row = scoreboard[i];
