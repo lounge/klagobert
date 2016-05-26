@@ -15,10 +15,10 @@
   - /last-whine - DONE
   - /me
   - /help - DONE
-  - /im-feeling-bitter - DONW
+  - /im-feeling-bitter - DONE
 
 * Features
-  - Combo (Multiple whines in a row) - SEMI DONE
+  - Combo (Multiple whines in a row, multiply bp by streak) - DONE
   - Achivements (BP per minute (BPM))
 
 
