@@ -166,4 +166,16 @@ Db.prototype.clearWhineStreak = function(user, callback) {
     });
 }
 
+Db.prototype.dropUser = function(user, callback) {
+  var self = this;
+  console.log('db ' + user);
+  this.db.collection('scoreboard').remove(
+    { 'user': user },
+    function(err, results) {
+      if (err) {
+        throw err;
+      }
+    });
+}
+
 module.exports = Db;
