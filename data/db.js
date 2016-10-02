@@ -35,17 +35,20 @@ Db.prototype.close = function() {
 Db.prototype.getBitterPointsForUser = function(user, callback) {
   this.db.collection('scoreboard')
     .findOne({ 'user': user })
-    .then(function(user) {
-      if (user !== null) {
+    .then(function(u) {
+      if (u !== null) {
+        console.log('username: ' + user + ' found ' + JSON.stringify(u));
         callback(user.points);
       } else {
-        callback(0);
+        console.log('db no user');
+        callback(null);
       }
   });
 }
 
 Db.prototype.updateScoreboard = function(user, bp) {
   var self = this;
+  console.log('update');
   this.db.collection('scoreboard').updateOne(
     { 'user': user },
     { $set: { 'points': bp } },
@@ -71,6 +74,7 @@ Db.prototype.clearScoreboard = function() {
 
 Db.prototype.saveLastWhineForUser = function(user, whine) {
   var self = this;
+  console.log('last wgine ' +  user);
   this.db.collection('last_whine').updateOne(
     { 'user': user },
     { $set: { 'whine': whine } },
@@ -95,6 +99,7 @@ Db.prototype.getLastWhineForUser = function(user, callback) {
 
 Db.prototype.saveWhineScore = function(whine, score) {
   var self = this;
+  // console.log('whien score ' +  user);
   this.db.collection('top_whines').updateOne(
     { 'whine': whine },
     { $set: { 'score': score } },
@@ -168,7 +173,7 @@ Db.prototype.clearWhineStreak = function(user, callback) {
 
 Db.prototype.dropUser = function(user, callback) {
   var self = this;
-  console.log('db ' + user);
+  // console.log('db ' + user);
   this.db.collection('scoreboard').remove(
     { 'user': user },
     function(err, results) {
