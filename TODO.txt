@@ -4,7 +4,7 @@
 
 * Split command logic to Commands.js / Messages.js - DONE
 
-* Add express server to map slash commands to routes - DONE
+* Add express server to map slash commands to routes - DONE, (HEROKU fucks this up...)
 
 * Disconnect msg
 
@@ -22,4 +22,4 @@
   - Achivements (BP per minute (BPM))
 
 
-* Util.js - MAYBE, MAYBE NOT, MAYBE GO FUCK YOURSELF...
+* tools.js - DONE (MAYBE, MAYBE NOT, MAYBE GO FUCK YOURSELF...)
