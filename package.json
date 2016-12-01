@@ -10,9 +10,10 @@
   "author": "Fred Lundén",
   "license": "ISC",
   "dependencies": {
-    "lodash.assign": "4.0.1",
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
+    "imgur-search": "^1.0.1",
+    "lodash.assign": "4.0.1",
     "mongodb": "^2.1.18",
     "sentiment-swedish": "^1.0.6",
     "slackbots": "^0.5.1"
