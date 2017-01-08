@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "cleverbot.io": "^1.0.4",
     "express": "^4.13.4",
     "imgur-search": "^1.0.1",
     "lodash.assign": "4.0.1",
