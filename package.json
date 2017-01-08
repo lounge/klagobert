@@ -17,6 +17,6 @@
     "lodash.assign": "4.0.1",
     "mongodb": "^2.1.18",
     "sentiment-swedish": "^1.0.6",
-    "slackbots": "^0.5.1"
+    "slackbots": "^1.0.2"
   }
 }

@@ -17,7 +17,6 @@ Db.prototype._connect = function() {
     // self.db.collection('top_whines').drop();
 
     self.getScoreboard(function(scoreboard) {
-      console.log('user length: ' + scoreboard.length);
       for (var i = 0; i < scoreboard.length; i++) {
         var row = scoreboard[i];
         console.log((i+1) + '. ' + row.user + ' | BP: ' + row.points);
@@ -35,13 +34,11 @@ Db.prototype.close = function() {
 }
 
 Db.prototype.getBitterPointsForUser = function(user, callback) {
-  console.log('getBitterPointsForUser ' + user);
   this.db.collection('scoreboard')
     .find({ 'user': user })
     .limit(1)
     .next(function(err, dock) {
       if (dock !== null) {
-        console.log('dock.points:' + JSON.stringify(dock));
         callback(dock.points);
       } else {
         callback(null);
@@ -51,7 +48,6 @@ Db.prototype.getBitterPointsForUser = function(user, callback) {
 
 Db.prototype.updateScoreboard = function(user, bp) {
   var self = this;
-  console.log('update ' + user);
   this.db.collection('scoreboard').updateOne(
     { 'user': user },
     { $set: { 'points': bp } },
@@ -77,7 +73,6 @@ Db.prototype.clearScoreboard = function() {
 
 Db.prototype.saveLastWhineForUser = function(user, whine) {
   var self = this;
-  console.log('last wgine ' +  user);
   this.db.collection('last_whine').updateOne(
     { 'user': user },
     { $set: { 'whine': whine } },
@@ -165,7 +160,6 @@ Db.prototype.getWhineStreak = function(user, callback) {
 
 Db.prototype.clearWhineStreak = function(user, callback) {
   var self = this;
-  console.log('clear whine streak; '  + user);
   this.db.collection('whine_streak').updateOne(
     { 'user': user },
     { $set: { 'streak': 0 } },
