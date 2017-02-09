@@ -25,8 +25,8 @@ Db.prototype._connect = function() {
       }
     });
 
-    // self.updateScoreboard('lounge', -29.01);
-
+    // self.updateScoreboard('irineos', -29.01);
+    // self.dropUser('lounge');
   });
 }
 
