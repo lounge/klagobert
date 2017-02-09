@@ -18,6 +18,7 @@
     "mongodb": "^2.1.18",
     "sentiment-swedish": "^1.0.6",
     "slackbots": "^1.0.2",
-    "winsay": "0.0.5"
+    "winsay": "0.0.5",
+    "extend": "^2.0.1"
   }
 }

@@ -3,6 +3,7 @@
 var mongo = require('mongodb');
 
 var Db = function Constructor(dbPath) {
+  console.log(dbPath);
   this.dbPath = dbPath;
   this.db = null;
 
@@ -11,6 +12,7 @@ var Db = function Constructor(dbPath) {
 
 Db.prototype._connect = function() {
   var self = this;
+
   mongo.MongoClient.connect(this.dbPath, function(err, db) {
     self.db = db;
     // self.db.collection('scoreboard').drop();
@@ -22,6 +24,9 @@ Db.prototype._connect = function() {
         console.log((i+1) + '. ' + row.user + ' | BP: ' + row.points);
       }
     });
+
+    // self.updateScoreboard('lounge', -29.01);
+
   });
 }
 
