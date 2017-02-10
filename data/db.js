@@ -25,7 +25,17 @@ Db.prototype._connect = function() {
       }
     });
 
-    // self.updateScoreboard('zunkas', 3410.51);
+
+
+// self.updateScoreboard(':papasatan:', 666);
+//
+//     self.updateScoreboard(':perfectsmile2:', 10000000000000000);
+//     self.updateScoreboard('zunkas', 3410.51);
+//     self.updateScoreboard('silisav', 525.08);
+//     self.updateScoreboard('slackbot', 0.2);
+//     self.updateScoreboard('dimmanramone', -6);
+//     self.updateScoreboard('toojla', -11.19);
+//     self.updateScoreboard('irineos', -25.1);
     // self.dropUser('lounge');
   });
 }
