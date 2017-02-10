@@ -25,7 +25,7 @@ Db.prototype._connect = function() {
       }
     });
 
-    // self.updateScoreboard('irineos', -29.01);
+    // self.updateScoreboard('zunkas', 3410.51);
     // self.dropUser('lounge');
   });
 }
