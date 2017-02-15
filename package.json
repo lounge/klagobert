@@ -11,14 +11,15 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "cleverbot-node": "^0.3.3",
     "cleverbot.io": "^1.0.4",
     "express": "^4.13.4",
+    "extend": "^2.0.1",
     "imgur-search": "^1.0.1",
     "lodash.assign": "4.0.1",
     "mongodb": "^2.1.18",
     "sentiment-swedish": "^1.0.6",
     "slackbots": "^1.0.2",
-    "winsay": "0.0.5",
-    "extend": "^2.0.1"
+    "winsay": "0.0.5"
   }
 }
