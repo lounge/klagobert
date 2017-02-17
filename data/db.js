@@ -63,13 +63,17 @@ Db.prototype.getBitterPointsForUser = function(user, callback) {
 
 Db.prototype.updateScoreboard = function(user, bp) {
   var self = this;
+  console.log('Updating scoreboard. User: ' + user + ' BP: ' + bp);
   this.db.collection('scoreboard').updateOne(
     { 'user': user },
     { $set: { 'points': bp } },
     { upsert: true },
     function(err, results) {
-      if (err)
+      if (err) {
+        console.log('error updating scoreboard. User: ' + user + ' BP: ' + bp);
         throw err;
+      }
+
     });
 }
 
