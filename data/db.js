@@ -30,7 +30,7 @@ Db.prototype._connect = function() {
 // self.updateScoreboard(':papasatan:', 666);
 //
 //     self.updateScoreboard(':perfectsmile2:', 10000000000000000);
-    self.updateScoreboard('zunkas', 2125.1337);
+    // self.updateScoreboard('zunkas', 2125.1337);
 //     self.updateScoreboard('silisav', 525.08);
 //     self.updateScoreboard('slackbot', 0.2);
 //     self.updateScoreboard('dimmanramone', -6);
