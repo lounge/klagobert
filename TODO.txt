@@ -6,14 +6,14 @@
 
 * Add express server to map slash commands to routes - DONE, (HEROKU fucks this up...)
 
-* Disconnect msg
+* Disconnect msg - DONE
 
 * Commands:
   - /scoreboard - DONE
   - /reset-bp - DONE
   - /top-whines - DONE
   - /last-whine - DONE
-  - /me
+  - /me - MAYBE
   - /help - DONE
   - /im-feeling-bitter - DONE
 
