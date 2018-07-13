@@ -16,10 +16,18 @@ var dbPath = process.env.MONGODB_URI;
 var channelId = process.env.CHANNEL_ID;
 var port =  process.env.PORT || 3000;
 
+console.log(token);
+console.log(name);
+console.log(dbPath);
+console.log(channelId);
+console.log(port);
+
 var db = new Db(dbPath);
 var sentiment = new Sentiment();
 var messages = new Messages(db, sentiment);
 var commands = new Commands(db, messages);
+
+
 
 
 var klagobert = new Klagobert({
