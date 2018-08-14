@@ -15,6 +15,7 @@
     "cleverbot.io": "^1.0.4",
     "express": "^4.13.4",
     "extend": "^2.0.1",
+    "giphy": "0.0.4",
     "imgur-search": "^1.0.1",
     "lodash.assign": "4.0.1",
     "mongodb": "^2.1.18",
