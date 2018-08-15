@@ -27,6 +27,7 @@ var sentiment = new Sentiment();
 var messages = new Messages(db, sentiment);
 var commands = new Commands(db, messages);
 
+
 var klagobert = new Klagobert({
   channelId: channelId,
   token: token,
