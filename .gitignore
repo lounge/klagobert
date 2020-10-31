@@ -37,3 +37,6 @@ node_modules
 
 #Mac
 .DS_store
+
+mongodb.txt
+run.txt
