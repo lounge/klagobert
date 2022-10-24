@@ -21,7 +21,7 @@
     "mongodb": "^3.6.2",
     "sentiment-swedish": "^1.1.0",
     "slackbots": "^1.2.0",
-    "twilio": "^3.50.0",
+    "twilio": "^3.83.0",
     "winsay": "0.0.5"
   }
 }
