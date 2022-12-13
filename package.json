@@ -13,7 +13,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cleverbot-node": "^0.3.11",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "extend": "^3.0.2",
     "giphy": "0.0.4",
     "imgur-search": "^1.0.1",
