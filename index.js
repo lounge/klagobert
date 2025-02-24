@@ -10,13 +10,10 @@ var bodyParser = require('body-parser');
 var express = require('express');
 var server = express();
 
-var token = process.env.BOT_API_KEY; 
-var name = process.env.BOT_NAME; 
-var dbPath = process.env.MONGODB_URI; 
-var channelId = process.env.CHANNEL_ID; 
-var twilioAcc = process.env.TWILIO_ACC; 
-var twilioApiKey = process.env.TWILIO_API_KEY; 
-
+var token = process.env.BOT_API_KEY;
+var name = process.env.BOT_NAME;
+var dbPath = process.env.MONGODB_URI;
+var channelId = process.env.CHANNEL_ID;
 var port =  process.env.PORT || 3000;
 
 console.log(token);
@@ -24,9 +21,6 @@ console.log(name);
 console.log(dbPath);
 console.log(channelId);
 console.log(port);
-console.log(twilioAcc);
-console.log(twilioApiKey);
-
 
 var db = new Db(dbPath);
 var sentiment = new Sentiment();
@@ -39,8 +33,6 @@ var klagobert = new Klagobert({
   token: token,
   name: name,
   db: db,
-  twilioAcc: twilioAcc,
-  twilioApiKey: twilioApiKey,
   messages: messages,
   commands: commands,
   sentiment: sentiment

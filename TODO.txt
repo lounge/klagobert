@@ -23,4 +23,3 @@
 
 
 * tools.js - DONE (MAYBE, MAYBE NOT, MAYBE GO FUCK YOURSELF...)
-

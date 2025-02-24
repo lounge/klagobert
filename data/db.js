@@ -1,26 +1,22 @@
 'use strict'
 
-const MongoClient = require('mongodb');
-
+var mongo = require('mongodb');
 
 var Db = function Constructor(dbPath) {
   console.log(dbPath);
   this.dbPath = dbPath;
-  this.mongo = null;
+  this.db = null;
 
   this._connect();
 };
 
 Db.prototype._connect = function() {
   var self = this;
-  // const mongoClient = new MongoClient(this.dbPath, { useNewUrlParser: true });
-  const mongo = MongoClient.MongoClient(this.dbPath, { useNewUrlParser: true, useUnifiedTopology: true  });
-  // self.mongo = mongo;
 
-  mongo.connect(function (err, client)  {
-    // const db = client.db("klagobert");//.collection("devices");
-    // self.db = db;
-    self.db = client.db('klagobert');
+  mongo.MongoClient.connect(this.dbPath, function(err, db) {
+    self.db = db;
+    // self.db.collection('scoreboard').drop();
+    // self.db.collection('top_whines').drop();
 
     self.getScoreboard(function(scoreboard) {
       for (var i = 0; i < scoreboard.length; i++) {
@@ -28,30 +24,21 @@ Db.prototype._connect = function() {
         console.log((i+1) + '. ' + row.user + ' | BP: ' + row.points);
       }
     });
+
+
+
+// self.updateScoreboard(':papasatan:', 666);
+//
+//     self.updateScoreboard(':perfectsmile2:', 10000000000000000);
+    // self.updateScoreboard('zunkas', 400);
+//     self.updateScoreboard('silisav', 525.08);
+//     self.updateScoreboard('slackbot', 0.2);
+//     self.updateScoreboard('dimmanramone', -6);
+//     self.updateScoreboard('toojla', -11.19);
+//     self.updateScoreboard('irineos', -25.1);
+    // self.dropUser('lounge');
   });
 }
-
-//   mongo.MongoClient.connect(this.dbPath, function(err, db) {
-//     self.db = db;
-//     // self.db.collection('scoreboard').drop();
-//     // self.db.collection('top_whines').drop();
-
-   
-
-
-
-// // self.updateScoreboard(':papasatan:', 666);
-// //
-// //     self.updateScoreboard(':perfectsmile2:', 10000000000000000);
-//     // self.updateScoreboard('zunkas', 400);
-// //     self.updateScoreboard('silisav', 525.08);
-// //     self.updateScoreboard('slackbot', 0.2);
-// //     self.updateScoreboard('dimmanramone', -6);
-// //     self.updateScoreboard('toojla', -11.19);
-// //     self.updateScoreboard('irineos', -25.1);
-//     // self.dropUser('lounge');
-//   });
-// }
 
 Db.prototype.close = function() {
   var self = this;

@@ -5,23 +5,23 @@
   "main": "lib/klagobert.js",
   "repository": "https://github.com/lounge/klagobert",
   "scripts": {
-    "start": "node index.js",
-    "dev": ""
+    "start": "node index.js"
   },
   "author": "Fred Lundén",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cleverbot-node": "^0.3.11",
-    "express": "^4.17.3",
-    "extend": "^3.0.2",
+    "body-parser": "^1.15.1",
+    "cleverbot-node": "^0.3.3",
+    "cleverbot.io": "^1.0.4",
+    "express": "^4.13.4",
+    "extend": "^2.0.1",
     "giphy": "0.0.4",
     "imgur-search": "^1.0.1",
-    "lodash.assign": "^4.2.0",
-    "mongodb": "^3.6.2",
-    "sentiment-swedish": "^1.1.0",
-    "slackbots": "^1.2.0",
-    "twilio": "^3.83.0",
+    "lodash.assign": "4.0.1",
+    "mongodb": "^2.1.18",
+    "sentiment-swedish": "^1.0.6",
+    "slackbots": "^1.0.2",
+    "twilio": "^2.11.1",
     "winsay": "0.0.5"
   }
 }

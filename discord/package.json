@@ -1,0 +1,11 @@
+{
+  "name": "klagobart_discord",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cleverbot-node": "^0.3.11",
+    "discord.js": "^14.18.0"
+  }
+}
