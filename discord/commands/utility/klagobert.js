@@ -1,9 +1,6 @@
 const { SlashCommandBuilder, InteractionContextType } = require('discord.js');
-const Cleverbot = require('cleverbot-node');
-const { cleverbotKey } = require('../../config.json');
-
-const cleverbot = new Cleverbot();
-cleverbot.configure({botapi: cleverbotKey});
+const CleverbotApi = new require('../../cleverbot-api');
+const cleverbot = new CleverbotApi();
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -17,10 +14,9 @@ module.exports = {
 	async execute(interaction) {
 		const msg = interaction.options.getString('message');
 
-		cleverbot.write(msg, async function (response) {
+		await cleverbot.send(msg, async function (response) {
 			console.log(response.output)
 			await interaction.reply(`***${msg}*** ${response.output}`);
-
 		 });
 	},
 };

@@ -3,7 +3,10 @@ const path = require('node:path');
 
 const { Client, Collection, Events, GatewayIntentBits, MessageFlags } = require('discord.js');
 
-const { token } = require('./config.json');
+const CleverbotApi = new require('./cleverbot-api');
+const cleverbot = new CleverbotApi();
+
+const { token, channelId } = require('./config.json');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const foldersPath = path.join(__dirname, 'commands');
@@ -26,8 +29,13 @@ for (const folder of commandFolders) {
 }
 
 
-client.on(Events.ClientReady, readyClient => {
+client.on(Events.ClientReady, async readyClient => {
   console.log(`Logged in as ${readyClient.user.tag}!`);
+
+  await cleverbot.send('Säg något riktigt spydigt och argt!', function (response) {
+	console.log(response);
+	client.channels.cache.get(channelId).send(response);
+  });
 });
 
 
